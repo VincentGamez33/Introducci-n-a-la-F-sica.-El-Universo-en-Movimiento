@@ -473,7 +473,8 @@ BoldItalicFont = *-BoldItalic]{TimesNewRoman}
         {\color{mainc!90}\vrule width 3pt}\colorbox{white}{
             \parbox[c]{\dimexpr\linewidth-3pt-2\fboxsep-2\fboxrule}{\vspace{1mm}\textbf{\textcolor{mainc!90}{\fontfamily{lmr}\selectfont\large i}\qquad\superior\selectfont\small Nota}\\[1.5mm]
             \creato\fontsize{5.75}{5.75}\linespread{1.25}\selectfont#1
-            }\,\,\,}
+            }\,\,\,
+        }
     }
 }
 
@@ -555,6 +556,22 @@ BoldItalicFont = *-BoldItalic]{TimesNewRoman}
         \captionsetup*[figure]{font={footnotesize},hypcap=false}%
         \IfValueT{#1}{\captionof{figure}{#1}}%
     }
+}
+
+\DeclareDocumentCommand{\sideFigureStar}{o O{0mm} m}{%
+    \marginElement{%
+        \strictpagechecktrue
+        \checkoddpage
+        \ifoddpage%
+            \RaggedRight%
+        \else%
+            \RaggedLeft%
+        \fi%
+        \@afterindentfalse\@afterheading%
+        \vspace*{#2}%
+        \IfValueT{#1}{#1}
+        #3%
+    }%
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

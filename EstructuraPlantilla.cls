@@ -309,9 +309,9 @@ BoldItalicFont = *-BoldItalic]{TimesNewRoman}
 \hypersetup{
 	pdfborder={1 1 0},
 	pdfcreator=LuaLaTeX,
-    pdftitle={Disquisitio Elementalis},
+    pdftitle={Introducción a la Física},
 	pdfauthor={Vicente Chavarría Gámez},
-    pdfsubject={Plantilla para notas, libros o tesis enfocadas a matemáticas.},
+    pdfsubject={Notas de física en LaTeX.},
     bookmarksopen=false,
     linktocpage=true,
 	colorlinks=false,
